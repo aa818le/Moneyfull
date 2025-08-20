@@ -1,0 +1,9 @@
+POST https://giper-8fd92-default-rtdb.firebaseio.com/ALL_BALANCES.json
+Content-Type: application/json
+
+{
+  "UserId": "0",
+  "Balance": 0,
+  "Currency": "0",
+  "Date": 0
+}
