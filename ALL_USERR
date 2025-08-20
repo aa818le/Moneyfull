@@ -1,0 +1,46 @@
+POST https://giper-8fd92-default-rtdb.firebaseio.com/ALL_USERR.json
+Content-Type: application/json
+
+{
+  "CaptchaId": "0",
+  "Data": {
+    "RegType": 0,
+    "CountryId": 0,
+    "CurrencyId": 0,
+    "Name": "0",
+    "Surname": "0",
+    "RegionId": 0,
+    "CityId": 0,
+    "Nationality": 0,
+    "Phone": "0",
+    "Birthday": "0",
+    "Email": "0",
+    "Password": "0",
+    "Date": 0,
+    "SendEmailEvents": "0",
+    "SendEmailBet": "0",
+    "PromoCode": "0",
+    "FirstBonusChoice": 0,
+    "VidDoc": 0,
+    "PassportNumber": "0",
+    "SurnameTwo": "0",
+    "Sex": 0,
+    "Address": "0",
+    "Postcode": "0",
+    "RulesConfirmation": 0,
+    "RulesConfirmationAll": 0,
+    "SharePersonalDataConfirmation": 0,
+    "IsPoliticallyExposedPerson": 0,
+    "TimeZone": "0",
+    "PostBack": "0",
+    "ReferralLink": "0",
+    "RefGuid": "0",
+    "QTag": "0",
+    "SendSmsEvents": "0",
+    "SendSmsBet": "0",
+    "NotifyNewsCall": "0",
+    "PassportDt": "0",
+    "PassportDateExpire": "0",
+    "Inn": "0"
+  }
+}
