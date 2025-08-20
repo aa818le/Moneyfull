@@ -1,0 +1,41 @@
+import { initializeApp, cert } from "firebase-admin/app";
+import { getDatabase } from "firebase-admin/database";
+
+const serviceAccount = {
+  projectId: "giper-8fd92",
+  clientEmail: "firebase-adminsdk-xxx@giper-8fd92.iam.gserviceaccount.com",
+  privateKey: process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/g, '\n'),
+};
+
+const app = initializeApp({
+  credential: cert(serviceAccount),
+  databaseURL: "https://giper-8fd92-default-rtdb.firebaseio.com"
+});
+
+const db = getDatabase(app);
+
+export default async function handler(req, res) {
+  if (req.method === "POST") {
+    const { Email, Password } = req.body;
+
+    // Example: UserAuth
+    const snap = await db.ref("ALL_USERR").orderByChild("Email").equalTo(Email).get();
+
+    if (!snap.exists()) {
+      return res.json({ Success: false, Message: "User not found" });
+    }
+
+    const user = Object.values(snap.val())[0];
+
+    if (user.Password !== Password) {
+      return res.json({ Success: false, Message: "Invalid password" });
+    }
+
+    return res.json({
+      Success: true,
+      UserId: user.UserId,
+      Token: "some_generated_token",
+      Balance: 0
+    });
+  }
+}
