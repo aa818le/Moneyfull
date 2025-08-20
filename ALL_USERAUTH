@@ -1,0 +1,17 @@
+POST https://giper-8fd92-default-rtdb.firebaseio.com/ALL_USERAUTH.json
+Content-Type: application/json
+
+{
+  "Answer": "0",
+  "AppGuid": "0",
+  "Date": 0,
+  "Language": "uz_UZ",
+  "Login": "0",
+  "OS": "Android",
+  "OSVersion": "0",
+  "Partner": 1,
+  "Password": "0",
+  "QrCode": "0",
+  "Version": "0",
+  "Whence": 0
+}
